@@ -37,6 +37,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 logdir = '/tmp/tf_logs'
 
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+
 
 def _to_tensor(x, dtype):
     """Convert the input `x` to a tensor of type `dtype`.
@@ -233,7 +237,7 @@ def train():
     train_X_left, train_X_right, train_Y, test_X_left, test_X_right, test_Y = graph_mat_data.load_googlejam_data_newencoding(
         neg_ratio=1.3, pos_ratio=1.0)
     t_beg = time.clock()
-    with tf.Session() as sess:
+    with tf.Session(config=config) as sess:
         merged = tf.summary.merge_all()
         train_writer = tf.summary.FileWriter(logdir,
                                              sess.graph)
@@ -299,7 +303,7 @@ def train_10_fold_balanced():
 
     skf = StratifiedKFold(n_splits=10)
     file_path = "../dataset/g4_128.npy"
-    dataset = np.load(open(file_path, 'r'))
+    dataset = np.load(open(file_path, 'r'), allow_pickle=True)
     X, y = np.array(dataset['X']), np.array(dataset['y'], dtype=np.int)
     # shuffle
     indices = np.random.permutation(X.shape[0])
@@ -310,9 +314,10 @@ def train_10_fold_balanced():
     avg_recall = 0.
     avg_precision = 0.
     avg_f1_score = 0.
-    fout = open('result/10_fold_balanced.txt', 'w')
+
     if os.path.exists('result') is not True:
         os.mkdir("result")
+    fout = open('result/10_fold_balanced.txt', 'w')
     if os.path.exists("10_fold_balanced") is not True:
         os.mkdir("10_fold_balanced")
     for train_idx, test_idx in skf.split(X, y):
@@ -340,7 +345,7 @@ def train_10_fold_balanced():
 
         t_beg = time.clock()
         # tf.reset_default_graph() # reset the model
-        with tf.Session() as sess:
+        with tf.Session(config=config) as sess:
             sess.run(tf.global_variables_initializer())
             sess.run(tf.local_variables_initializer())
             merged = tf.summary.merge_all()
@@ -362,6 +367,7 @@ def train_10_fold_balanced():
                         range(0, np.shape(train_X_left)[0], batch_size),
                         range(batch_size, np.shape(train_X_left)[0] + 1,
                               batch_size)):
+                    it_beg = time.clock()
                     dense_train_X_left = from_sparse_arrs(
                         train_X_left[start:end])
                     dense_train_X_right = from_sparse_arrs(
@@ -370,6 +376,7 @@ def train_10_fold_balanced():
                                                      classes_weights)
                     batch_samples_weights = np.reshape(batch_samples_weights,
                                                        newshape=[batch_size])
+
                     _ = sess.run([train_op],
                                           feed_dict={X_left: dense_train_X_left,
                                                      X_right: dense_train_X_right,
@@ -378,7 +385,8 @@ def train_10_fold_balanced():
                                                          batch_samples_weights,
                                                      dropout: keep_prob,
                                                      phase: 1})
-                    print('epoch %d, iteration %d\n' % (epoch, step))
+
+                    print('epoch %d, iteration %d, time %.2f\n' % (epoch, step, time.clock()-it_beg))
                     step += 1
                     if step % 100 == 0 and step != 0:
                         batch_samples_weights = np.matmul(test_Y[:test_size],
@@ -516,7 +524,7 @@ def predict_on_full_dataset():
     
     t_beg = time.clock()
     saver = tf.train.Saver()
-    sess = tf.InteractiveSession()
+    sess = tf.InteractiveSession(config=config)
     saver.restore(sess, '10_fold_balanced/2/mode.ckpt')
 
     iter = 0
