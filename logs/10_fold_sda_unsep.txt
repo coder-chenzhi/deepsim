@@ -1,0 +1,1967 @@
+
+(deepsim) chenzhi@Bruce-Lin:~/Code/deepsim/dcsim$ python sda_unsup.py 
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/chenzhi/.conda/envs/deepsim/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From sda_unsup.py:78: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From sda_unsup.py:201: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+/home/chenzhi/.conda/envs/deepsim/lib/python2.7/site-packages/sklearn/model_selection/_split.py:652: Warning: The least populated class in y has only 2 members, which is too few. The minimum number of members in any class cannot be less than n_splits=10.
+  % (min_groups, self.n_splits)), Warning)
+****************************************0****************************************
+Traceback (most recent call last):
+  File "sda_unsup.py", line 545, in <module>
+    train_10_fold()
+  File "sda_unsup.py", line 225, in train_10_fold
+    os.mkdir(fold_path)
+OSError: [Errno 2] No such file or directory: 'old_models_10_fold/sda_unsup/0'
+(deepsim) chenzhi@Bruce-Lin:~/Code/deepsim/dcsim$ python sda_unsup.py 
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/chenzhi/.conda/envs/deepsim/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From sda_unsup.py:78: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From sda_unsup.py:201: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+/home/chenzhi/.conda/envs/deepsim/lib/python2.7/site-packages/sklearn/model_selection/_split.py:652: Warning: The least populated class in y has only 2 members, which is too few. The minimum number of members in any class cannot be less than n_splits=10.
+  % (min_groups, self.n_splits)), Warning)
+****************************************0****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 361.564
+
+Epoch: 20, Iter: 100
+
+l2 cost: 327.737
+
+Epoch: 40, Iter: 200
+
+l2 cost: 326.554
+
+Epoch: 60, Iter: 300
+
+l2 cost: 325.374
+
+Epoch: 80, Iter: 400
+
+l2 cost: 323.974
+
+Epoch: 100, Iter: 500
+
+l2 cost: 322.859
+
+Epoch: 120, Iter: 600
+
+l2 cost: 322.351
+
+Epoch: 140, Iter: 700
+
+l2 cost: 321.659
+
+Epoch: 160, Iter: 800
+
+l2 cost: 321.064
+
+Epoch: 180, Iter: 900
+
+l2 cost: 321.059
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 321.058
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 321.174
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 321.705
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 322.804
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 324.942
+
+Unsup phase time: 408.67
+Epoch: 0, Iter: 0 Time: 0.47
+
+Epoch: 0, Iter: 100 Time: 39.72
+
+Epoch: 0, Iter: 200 Time: 39.63
+
+Epoch: 0, Iter: 300 Time: 39.90
+
+Epoch: 0, Iter: 400 Time: 39.82
+
+Epoch: 0, Iter: 500 Time: 39.99
+
+Epoch: 0, Iter: 600 Time: 40.19
+
+Epoch: 0, Iter: 700 Time: 39.77
+
+Epoch: 0, Iter: 800 Time: 39.66
+
+Epoch: 0, Iter: 900 Time: 39.63
+
+Epoch: 0, Iter: 1000 Time: 39.61
+
+Epoch: 0, Iter: 1100 Time: 39.67
+
+Epoch: 0, Iter: 1200 Time: 39.82
+
+Epoch: 0, Iter: 1300 Time: 39.71
+
+Epoch: 0, Iter: 1400 Time: 39.74
+
+Epoch: 0, Iter: 1500 Time: 39.75
+
+Epoch: 0, Iter: 1600 Time: 39.72
+
+Epoch: 0, Iter: 1700 Time: 39.76
+
+Clone pairs: 38, non-clone pairs: 218 
+Recall: 0.657895, precision: 0.170068, f1 score: 0.270270
+Predicted_positive_count: 147, recall truly positive: 25, false positive: 122, missed true positive: 13
+(0, 0.47265625)
+model saved.
+Epoch: 1, Iter: 1800 Time: 25.37
+
+Epoch: 1, Iter: 1900 Time: 40.25
+
+Epoch: 1, Iter: 2000 Time: 40.21
+
+Epoch: 1, Iter: 2100 Time: 40.26
+
+Epoch: 1, Iter: 2200 Time: 40.22
+
+Epoch: 1, Iter: 2300 Time: 40.27
+
+Epoch: 1, Iter: 2400 Time: 40.29
+
+Epoch: 1, Iter: 2500 Time: 40.29
+
+Epoch: 1, Iter: 2600 Time: 40.30
+
+Epoch: 1, Iter: 2700 Time: 40.27
+
+Epoch: 1, Iter: 2800 Time: 40.28
+
+Epoch: 1, Iter: 2900 Time: 40.31
+
+Epoch: 1, Iter: 3000 Time: 40.25
+
+Epoch: 1, Iter: 3100 Time: 40.30
+
+Epoch: 1, Iter: 3200 Time: 40.34
+
+Epoch: 1, Iter: 3300 Time: 40.26
+
+Epoch: 1, Iter: 3400 Time: 40.27
+
+Clone pairs: 38, non-clone pairs: 218 
+Recall: 0.789474, precision: 0.173410, f1 score: 0.284360
+Predicted_positive_count: 173, recall truly positive: 30, false positive: 143, missed true positive: 8
+(1, 0.41015625)
+model saved.
+Epoch: 2, Iter: 3500 Time: 10.32
+
+Epoch: 2, Iter: 3600 Time: 42.19
+
+Epoch: 2, Iter: 3700 Time: 41.19
+
+Epoch: 2, Iter: 3800 Time: 41.51
+
+Epoch: 2, Iter: 3900 Time: 41.44
+
+Epoch: 2, Iter: 4000 Time: 41.29
+
+Epoch: 2, Iter: 4100 Time: 41.29
+
+Epoch: 2, Iter: 4200 Time: 41.30
+
+Epoch: 2, Iter: 4300 Time: 41.28
+
+Epoch: 2, Iter: 4400 Time: 41.29
+
+Epoch: 2, Iter: 4500 Time: 41.33
+
+Epoch: 2, Iter: 4600 Time: 41.29
+
+Epoch: 2, Iter: 4700 Time: 41.38
+
+Epoch: 2, Iter: 4800 Time: 41.28
+
+Epoch: 2, Iter: 4900 Time: 41.29
+
+Epoch: 2, Iter: 5000 Time: 41.30
+
+Epoch: 2, Iter: 5100 Time: 42.21
+
+Epoch: 2, Iter: 5200 Time: 41.23
+
+Clone pairs: 38, non-clone pairs: 218 
+Recall: 0.631579, precision: 0.155844, f1 score: 0.250000
+Predicted_positive_count: 154, recall truly positive: 24, false positive: 130, missed true positive: 14
+(2, 0.4375)
+model saved.
+time cost: 2525.27
+Overall accuracy: 0.47935
+Time cost: 2548.52
+Clone pairs: 2703, non-clone pairs: 11633 
+Recall: 0.700703, precision: 0.221546, f1 score: 0.336651
+Predicted_positive_count: 8549, recall truly positive: 1894, false positive: 6655, missed true positive: 809
+********************************************************************************
+****************************************1****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 371.214
+
+Epoch: 20, Iter: 100
+
+l2 cost: 334.011
+
+Epoch: 40, Iter: 200
+
+l2 cost: 332.708
+
+Epoch: 60, Iter: 300
+
+l2 cost: 331.228
+
+Epoch: 80, Iter: 400
+
+l2 cost: 330.219
+
+Epoch: 100, Iter: 500
+
+l2 cost: 328.770
+
+Epoch: 120, Iter: 600
+
+l2 cost: 328.622
+
+Epoch: 140, Iter: 700
+
+l2 cost: 327.890
+
+Epoch: 160, Iter: 800
+
+l2 cost: 327.690
+
+Epoch: 180, Iter: 900
+
+l2 cost: 327.379
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 327.072
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 327.087
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 327.255
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 327.822
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 328.463
+
+Unsup phase time: 399.41
+Epoch: 0, Iter: 0 Time: 0.47
+
+Epoch: 0, Iter: 100 Time: 39.36
+
+Epoch: 0, Iter: 200 Time: 39.52
+
+Epoch: 0, Iter: 300 Time: 39.97
+
+Epoch: 0, Iter: 400 Time: 40.40
+
+Epoch: 0, Iter: 500 Time: 40.35
+
+Epoch: 0, Iter: 600 Time: 40.33
+
+Epoch: 0, Iter: 700 Time: 40.16
+
+Epoch: 0, Iter: 800 Time: 40.18
+
+Epoch: 0, Iter: 900 Time: 40.17
+
+Epoch: 0, Iter: 1000 Time: 40.08
+
+Epoch: 0, Iter: 1100 Time: 39.95
+
+Epoch: 0, Iter: 1200 Time: 39.87
+
+Epoch: 0, Iter: 1300 Time: 39.74
+
+Epoch: 0, Iter: 1400 Time: 39.50
+
+Epoch: 0, Iter: 1500 Time: 38.70
+
+Epoch: 0, Iter: 1600 Time: 38.71
+
+Epoch: 0, Iter: 1700 Time: 39.67
+
+Clone pairs: 61, non-clone pairs: 195 
+Recall: 0.770492, precision: 0.309211, f1 score: 0.441315
+Predicted_positive_count: 152, recall truly positive: 47, false positive: 105, missed true positive: 14
+(0, 0.53515625)
+model saved.
+Epoch: 1, Iter: 1800 Time: 26.61
+
+Epoch: 1, Iter: 1900 Time: 41.48
+
+Epoch: 1, Iter: 2000 Time: 40.68
+
+Epoch: 1, Iter: 2100 Time: 40.74
+
+Epoch: 1, Iter: 2200 Time: 40.71
+
+Epoch: 1, Iter: 2300 Time: 40.73
+
+Epoch: 1, Iter: 2400 Time: 40.74
+
+Epoch: 1, Iter: 2500 Time: 40.74
+
+Epoch: 1, Iter: 2600 Time: 40.70
+
+Epoch: 1, Iter: 2700 Time: 40.73
+
+Epoch: 1, Iter: 2800 Time: 40.76
+
+Epoch: 1, Iter: 2900 Time: 40.70
+
+Epoch: 1, Iter: 3000 Time: 40.71
+
+Epoch: 1, Iter: 3100 Time: 40.74
+
+Epoch: 1, Iter: 3200 Time: 41.57
+
+Epoch: 1, Iter: 3300 Time: 40.91
+
+Epoch: 1, Iter: 3400 Time: 40.72
+
+Clone pairs: 61, non-clone pairs: 195 
+Recall: 0.754098, precision: 0.285714, f1 score: 0.414414
+Predicted_positive_count: 161, recall truly positive: 46, false positive: 115, missed true positive: 15
+(1, 0.4921875)
+model saved.
+Epoch: 2, Iter: 3500 Time: 10.31
+
+Epoch: 2, Iter: 3600 Time: 41.07
+
+Epoch: 2, Iter: 3700 Time: 40.79
+
+Epoch: 2, Iter: 3800 Time: 40.82
+
+Epoch: 2, Iter: 3900 Time: 40.85
+
+Epoch: 2, Iter: 4000 Time: 40.85
+
+Epoch: 2, Iter: 4100 Time: 40.79
+
+Epoch: 2, Iter: 4200 Time: 40.83
+
+Epoch: 2, Iter: 4300 Time: 40.85
+
+Epoch: 2, Iter: 4400 Time: 40.84
+
+Epoch: 2, Iter: 4500 Time: 40.75
+
+Epoch: 2, Iter: 4600 Time: 40.57
+
+Epoch: 2, Iter: 4700 Time: 40.53
+
+Epoch: 2, Iter: 4800 Time: 40.59
+
+Epoch: 2, Iter: 4900 Time: 40.55
+
+Epoch: 2, Iter: 5000 Time: 40.59
+
+Epoch: 2, Iter: 5100 Time: 40.54
+
+Epoch: 2, Iter: 5200 Time: 40.62
+
+Clone pairs: 61, non-clone pairs: 195 
+Recall: 0.770492, precision: 0.290123, f1 score: 0.421525
+Predicted_positive_count: 162, recall truly positive: 47, false positive: 115, missed true positive: 14
+(2, 0.49609375)
+model saved.
+time cost: 2515.44
+Overall accuracy: 0.43066
+Time cost: 2538.27
+Clone pairs: 2707, non-clone pairs: 11629 
+Recall: 0.691540, precision: 0.203500, f1 score: 0.314463
+Predicted_positive_count: 9199, recall truly positive: 1872, false positive: 7327, missed true positive: 835
+********************************************************************************
+****************************************2****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 365.227
+
+Epoch: 20, Iter: 100
+
+l2 cost: 330.125
+
+Epoch: 40, Iter: 200
+
+l2 cost: 327.849
+
+Epoch: 60, Iter: 300
+
+l2 cost: 326.418
+
+Epoch: 80, Iter: 400
+
+l2 cost: 324.561
+
+Epoch: 100, Iter: 500
+
+l2 cost: 323.651
+
+Epoch: 120, Iter: 600
+
+l2 cost: 323.241
+
+Epoch: 140, Iter: 700
+
+l2 cost: 322.696
+
+Epoch: 160, Iter: 800
+
+l2 cost: 322.579
+
+Epoch: 180, Iter: 900
+
+l2 cost: 321.974
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 322.166
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 322.025
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 321.972
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 322.334
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 322.801
+
+Unsup phase time: 391.86
+Epoch: 0, Iter: 0 Time: 0.47
+
+Epoch: 0, Iter: 100 Time: 38.98
+
+Epoch: 0, Iter: 200 Time: 38.69
+
+Epoch: 0, Iter: 300 Time: 38.65
+
+Epoch: 0, Iter: 400 Time: 38.63
+
+Epoch: 0, Iter: 500 Time: 38.69
+
+Epoch: 0, Iter: 600 Time: 38.65
+
+Epoch: 0, Iter: 700 Time: 38.61
+
+Epoch: 0, Iter: 800 Time: 38.69
+
+Epoch: 0, Iter: 900 Time: 38.70
+
+Epoch: 0, Iter: 1000 Time: 38.74
+
+Epoch: 0, Iter: 1100 Time: 38.77
+
+Epoch: 0, Iter: 1200 Time: 38.76
+
+Epoch: 0, Iter: 1300 Time: 38.73
+
+Epoch: 0, Iter: 1400 Time: 38.78
+
+Epoch: 0, Iter: 1500 Time: 38.54
+
+Epoch: 0, Iter: 1600 Time: 38.56
+
+Epoch: 0, Iter: 1700 Time: 38.52
+
+Clone pairs: 42, non-clone pairs: 214 
+Recall: 0.714286, precision: 0.200000, f1 score: 0.312500
+Predicted_positive_count: 150, recall truly positive: 30, false positive: 120, missed true positive: 12
+(0, 0.484375)
+model saved.
+Epoch: 1, Iter: 1800 Time: 24.00
+
+Epoch: 1, Iter: 1900 Time: 38.22
+
+Epoch: 1, Iter: 2000 Time: 38.15
+
+Epoch: 1, Iter: 2100 Time: 38.20
+
+Epoch: 1, Iter: 2200 Time: 38.24
+
+Epoch: 1, Iter: 2300 Time: 38.19
+
+Epoch: 1, Iter: 2400 Time: 38.24
+
+Epoch: 1, Iter: 2500 Time: 38.19
+
+Epoch: 1, Iter: 2600 Time: 38.20
+
+Epoch: 1, Iter: 2700 Time: 38.19
+
+Epoch: 1, Iter: 2800 Time: 38.21
+
+Epoch: 1, Iter: 2900 Time: 39.32
+
+Epoch: 1, Iter: 3000 Time: 38.42
+
+Epoch: 1, Iter: 3100 Time: 38.17
+
+Epoch: 1, Iter: 3200 Time: 38.24
+
+Epoch: 1, Iter: 3300 Time: 38.20
+
+Epoch: 1, Iter: 3400 Time: 38.19
+
+Clone pairs: 42, non-clone pairs: 214 
+Recall: 0.642857, precision: 0.204545, f1 score: 0.310345
+Predicted_positive_count: 132, recall truly positive: 27, false positive: 105, missed true positive: 15
+(1, 0.53125)
+model saved.
+Epoch: 2, Iter: 3500 Time: 9.64
+
+Epoch: 2, Iter: 3600 Time: 38.33
+
+Epoch: 2, Iter: 3700 Time: 38.33
+
+Epoch: 2, Iter: 3800 Time: 38.36
+
+Epoch: 2, Iter: 3900 Time: 38.38
+
+Epoch: 2, Iter: 4000 Time: 38.40
+
+Epoch: 2, Iter: 4100 Time: 38.34
+
+Epoch: 2, Iter: 4200 Time: 38.39
+
+Epoch: 2, Iter: 4300 Time: 38.42
+
+Epoch: 2, Iter: 4400 Time: 38.42
+
+Epoch: 2, Iter: 4500 Time: 38.40
+
+Epoch: 2, Iter: 4600 Time: 38.45
+
+Epoch: 2, Iter: 4700 Time: 38.42
+
+Epoch: 2, Iter: 4800 Time: 38.40
+
+Epoch: 2, Iter: 4900 Time: 38.41
+
+Epoch: 2, Iter: 5000 Time: 38.46
+
+Epoch: 2, Iter: 5100 Time: 38.47
+
+Epoch: 2, Iter: 5200 Time: 38.47
+
+Clone pairs: 42, non-clone pairs: 214 
+Recall: 0.642857, precision: 0.214286, f1 score: 0.321429
+Predicted_positive_count: 126, recall truly positive: 27, false positive: 99, missed true positive: 15
+(2, 0.5546875)
+model saved.
+time cost: 2402.28
+Overall accuracy: 0.55434
+Time cost: 2424.00
+Clone pairs: 2737, non-clone pairs: 11599 
+Recall: 0.640482, precision: 0.244901, f1 score: 0.354320
+Predicted_positive_count: 7158, recall truly positive: 1753, false positive: 5405, missed true positive: 984
+********************************************************************************
+****************************************3****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 368.566
+
+Epoch: 20, Iter: 100
+
+l2 cost: 333.442
+
+Epoch: 40, Iter: 200
+
+l2 cost: 327.555
+
+Epoch: 60, Iter: 300
+
+l2 cost: 325.214
+
+Epoch: 80, Iter: 400
+
+l2 cost: 323.428
+
+Epoch: 100, Iter: 500
+
+l2 cost: 322.153
+
+Epoch: 120, Iter: 600
+
+l2 cost: 321.387
+
+Epoch: 140, Iter: 700
+
+l2 cost: 321.052
+
+Epoch: 160, Iter: 800
+
+l2 cost: 320.552
+
+Epoch: 180, Iter: 900
+
+l2 cost: 320.681
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 320.973
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 321.436
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 322.379
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 324.713
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 327.225
+
+Unsup phase time: 394.47
+Epoch: 0, Iter: 0 Time: 0.47
+
+Epoch: 0, Iter: 100 Time: 38.65
+
+Epoch: 0, Iter: 200 Time: 38.64
+
+Epoch: 0, Iter: 300 Time: 38.66
+
+Epoch: 0, Iter: 400 Time: 38.67
+
+Epoch: 0, Iter: 500 Time: 38.65
+
+Epoch: 0, Iter: 600 Time: 38.63
+
+Epoch: 0, Iter: 700 Time: 38.63
+
+Epoch: 0, Iter: 800 Time: 38.60
+
+Epoch: 0, Iter: 900 Time: 38.64
+
+Epoch: 0, Iter: 1000 Time: 38.65
+
+Epoch: 0, Iter: 1100 Time: 38.61
+
+Epoch: 0, Iter: 1200 Time: 38.66
+
+Epoch: 0, Iter: 1300 Time: 38.64
+
+Epoch: 0, Iter: 1400 Time: 38.64
+
+Epoch: 0, Iter: 1500 Time: 38.65
+
+Epoch: 0, Iter: 1600 Time: 38.85
+
+Epoch: 0, Iter: 1700 Time: 39.06
+
+Clone pairs: 42, non-clone pairs: 214 
+Recall: 0.500000, precision: 0.185841, f1 score: 0.270968
+Predicted_positive_count: 113, recall truly positive: 21, false positive: 92, missed true positive: 21
+(0, 0.55859375)
+model saved.
+Epoch: 1, Iter: 1800 Time: 24.01
+
+Epoch: 1, Iter: 1900 Time: 38.09
+
+Epoch: 1, Iter: 2000 Time: 38.03
+
+Epoch: 1, Iter: 2100 Time: 38.10
+
+Epoch: 1, Iter: 2200 Time: 40.13
+
+Epoch: 1, Iter: 2300 Time: 38.76
+
+Epoch: 1, Iter: 2400 Time: 38.15
+
+Epoch: 1, Iter: 2500 Time: 38.11
+
+Epoch: 1, Iter: 2600 Time: 38.18
+
+Epoch: 1, Iter: 2700 Time: 38.18
+
+Epoch: 1, Iter: 2800 Time: 38.10
+
+Epoch: 1, Iter: 2900 Time: 38.16
+
+Epoch: 1, Iter: 3000 Time: 38.12
+
+Epoch: 1, Iter: 3100 Time: 38.18
+
+Epoch: 1, Iter: 3200 Time: 38.14
+
+Epoch: 1, Iter: 3300 Time: 38.19
+
+Epoch: 1, Iter: 3400 Time: 38.19
+
+Clone pairs: 42, non-clone pairs: 214 
+Recall: 0.428571, precision: 0.159292, f1 score: 0.232258
+Predicted_positive_count: 113, recall truly positive: 18, false positive: 95, missed true positive: 24
+(1, 0.53515625)
+model saved.
+Epoch: 2, Iter: 3500 Time: 9.54
+
+Epoch: 2, Iter: 3600 Time: 38.02
+
+Epoch: 2, Iter: 3700 Time: 38.11
+
+Epoch: 2, Iter: 3800 Time: 38.12
+
+Epoch: 2, Iter: 3900 Time: 38.07
+
+Epoch: 2, Iter: 4000 Time: 37.96
+
+Epoch: 2, Iter: 4100 Time: 38.00
+
+Epoch: 2, Iter: 4200 Time: 38.05
+
+Epoch: 2, Iter: 4300 Time: 38.04
+
+Epoch: 2, Iter: 4400 Time: 38.01
+
+Epoch: 2, Iter: 4500 Time: 38.07
+
+Epoch: 2, Iter: 4600 Time: 38.00
+
+Epoch: 2, Iter: 4700 Time: 38.22
+
+Epoch: 2, Iter: 4800 Time: 38.07
+
+Epoch: 2, Iter: 4900 Time: 38.04
+
+Epoch: 2, Iter: 5000 Time: 38.06
+
+Epoch: 2, Iter: 5100 Time: 38.08
+
+Epoch: 2, Iter: 5200 Time: 38.02
+
+Clone pairs: 42, non-clone pairs: 214 
+Recall: 0.404762, precision: 0.163462, f1 score: 0.232877
+Predicted_positive_count: 104, recall truly positive: 17, false positive: 87, missed true positive: 25
+(2, 0.5625)
+model saved.
+time cost: 2399.18
+Overall accuracy: 0.61056
+Time cost: 2420.58
+Clone pairs: 2736, non-clone pairs: 11600 
+Recall: 0.516813, precision: 0.249163, f1 score: 0.336226
+Predicted_positive_count: 5675, recall truly positive: 1414, false positive: 4261, missed true positive: 1322
+********************************************************************************
+****************************************4****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 369.594
+
+Epoch: 20, Iter: 100
+
+l2 cost: 333.618
+
+Epoch: 40, Iter: 200
+
+l2 cost: 330.398
+
+Epoch: 60, Iter: 300
+
+l2 cost: 329.180
+
+Epoch: 80, Iter: 400
+
+l2 cost: 328.105
+
+Epoch: 100, Iter: 500
+
+l2 cost: 327.477
+
+Epoch: 120, Iter: 600
+
+l2 cost: 326.627
+
+Epoch: 140, Iter: 700
+
+l2 cost: 325.662
+
+Epoch: 160, Iter: 800
+
+l2 cost: 325.895
+
+Epoch: 180, Iter: 900
+
+l2 cost: 325.308
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 324.916
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 325.208
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 325.931
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 327.378
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 329.435
+
+Unsup phase time: 390.35
+Epoch: 0, Iter: 0 Time: 0.48
+
+Epoch: 0, Iter: 100 Time: 38.34
+
+Epoch: 0, Iter: 200 Time: 38.24
+
+Epoch: 0, Iter: 300 Time: 38.21
+
+Epoch: 0, Iter: 400 Time: 38.24
+
+Epoch: 0, Iter: 500 Time: 38.28
+
+Epoch: 0, Iter: 600 Time: 38.31
+
+Epoch: 0, Iter: 700 Time: 38.30
+
+Epoch: 0, Iter: 800 Time: 38.28
+
+Epoch: 0, Iter: 900 Time: 38.27
+
+Epoch: 0, Iter: 1000 Time: 38.29
+
+Epoch: 0, Iter: 1100 Time: 38.23
+
+Epoch: 0, Iter: 1200 Time: 38.24
+
+Epoch: 0, Iter: 1300 Time: 38.30
+
+Epoch: 0, Iter: 1400 Time: 38.30
+
+Epoch: 0, Iter: 1500 Time: 38.26
+
+Epoch: 0, Iter: 1600 Time: 38.29
+
+Epoch: 0, Iter: 1700 Time: 38.28
+
+Clone pairs: 38, non-clone pairs: 218 
+Recall: 0.815789, precision: 0.161458, f1 score: 0.269565
+Predicted_positive_count: 192, recall truly positive: 31, false positive: 161, missed true positive: 7
+(0, 0.34375)
+model saved.
+Epoch: 1, Iter: 1800 Time: 23.09
+
+Epoch: 1, Iter: 1900 Time: 37.92
+
+Epoch: 1, Iter: 2000 Time: 37.90
+
+Epoch: 1, Iter: 2100 Time: 37.91
+
+Epoch: 1, Iter: 2200 Time: 37.94
+
+Epoch: 1, Iter: 2300 Time: 37.93
+
+Epoch: 1, Iter: 2400 Time: 37.94
+
+Epoch: 1, Iter: 2500 Time: 37.88
+
+Epoch: 1, Iter: 2600 Time: 37.92
+
+Epoch: 1, Iter: 2700 Time: 37.94
+
+Epoch: 1, Iter: 2800 Time: 37.94
+
+Epoch: 1, Iter: 2900 Time: 37.89
+
+Epoch: 1, Iter: 3000 Time: 37.85
+
+Epoch: 1, Iter: 3100 Time: 37.97
+
+Epoch: 1, Iter: 3200 Time: 37.92
+
+Epoch: 1, Iter: 3300 Time: 38.03
+
+Epoch: 1, Iter: 3400 Time: 37.93
+
+Clone pairs: 38, non-clone pairs: 218 
+Recall: 0.552632, precision: 0.175000, f1 score: 0.265823
+Predicted_positive_count: 120, recall truly positive: 21, false positive: 99, missed true positive: 17
+(1, 0.546875)
+model saved.
+Epoch: 2, Iter: 3500 Time: 8.03
+
+Epoch: 2, Iter: 3600 Time: 38.09
+
+Epoch: 2, Iter: 3700 Time: 38.11
+
+Epoch: 2, Iter: 3800 Time: 38.07
+
+Epoch: 2, Iter: 3900 Time: 38.14
+
+Epoch: 2, Iter: 4000 Time: 38.17
+
+Epoch: 2, Iter: 4100 Time: 38.09
+
+Epoch: 2, Iter: 4200 Time: 38.18
+
+Epoch: 2, Iter: 4300 Time: 38.05
+
+Epoch: 2, Iter: 4400 Time: 38.08
+
+Epoch: 2, Iter: 4500 Time: 38.07
+
+Epoch: 2, Iter: 4600 Time: 38.02
+
+Epoch: 2, Iter: 4700 Time: 38.10
+
+Epoch: 2, Iter: 4800 Time: 38.06
+
+Epoch: 2, Iter: 4900 Time: 38.11
+
+Epoch: 2, Iter: 5000 Time: 38.07
+
+Epoch: 2, Iter: 5100 Time: 38.06
+
+Epoch: 2, Iter: 5200 Time: 38.08
+
+Clone pairs: 38, non-clone pairs: 218 
+Recall: 0.684211, precision: 0.184397, f1 score: 0.290503
+Predicted_positive_count: 141, recall truly positive: 26, false positive: 115, missed true positive: 12
+(2, 0.50390625)
+model saved.
+time cost: 2384.38
+Overall accuracy: 0.49356
+Time cost: 2404.98
+Clone pairs: 2668, non-clone pairs: 11156 
+Recall: 0.641304, precision: 0.220632, f1 score: 0.328312
+Predicted_positive_count: 7755, recall truly positive: 1711, false positive: 6044, missed true positive: 957
+********************************************************************************
+****************************************5****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 368.205
+
+Epoch: 20, Iter: 100
+
+l2 cost: 333.043
+
+Epoch: 40, Iter: 200
+
+l2 cost: 329.202
+
+Epoch: 60, Iter: 300
+
+l2 cost: 327.111
+
+Epoch: 80, Iter: 400
+
+l2 cost: 325.155
+
+Epoch: 100, Iter: 500
+
+l2 cost: 324.413
+
+Epoch: 120, Iter: 600
+
+l2 cost: 323.451
+
+Epoch: 140, Iter: 700
+
+l2 cost: 322.951
+
+Epoch: 160, Iter: 800
+
+l2 cost: 322.600
+
+Epoch: 180, Iter: 900
+
+l2 cost: 322.443
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 322.153
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 322.374
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 322.886
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 323.651
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 324.613
+
+Unsup phase time: 391.24
+Epoch: 0, Iter: 0 Time: 0.49
+
+Epoch: 0, Iter: 100 Time: 38.37
+
+Epoch: 0, Iter: 200 Time: 38.32
+
+Epoch: 0, Iter: 300 Time: 38.37
+
+Epoch: 0, Iter: 400 Time: 38.35
+
+Epoch: 0, Iter: 500 Time: 38.33
+
+Epoch: 0, Iter: 600 Time: 38.33
+
+Epoch: 0, Iter: 700 Time: 38.31
+
+Epoch: 0, Iter: 800 Time: 38.34
+
+Epoch: 0, Iter: 900 Time: 38.39
+
+Epoch: 0, Iter: 1000 Time: 38.35
+
+Epoch: 0, Iter: 1100 Time: 38.36
+
+Epoch: 0, Iter: 1200 Time: 38.33
+
+Epoch: 0, Iter: 1300 Time: 38.32
+
+Epoch: 0, Iter: 1400 Time: 38.33
+
+Epoch: 0, Iter: 1500 Time: 38.28
+
+Epoch: 0, Iter: 1600 Time: 38.38
+
+Epoch: 0, Iter: 1700 Time: 38.33
+
+Clone pairs: 58, non-clone pairs: 198 
+Recall: 0.586207, precision: 0.272000, f1 score: 0.371585
+Predicted_positive_count: 125, recall truly positive: 34, false positive: 91, missed true positive: 24
+(0, 0.55078125)
+model saved.
+Epoch: 1, Iter: 1800 Time: 22.64
+
+Epoch: 1, Iter: 1900 Time: 40.37
+
+Epoch: 1, Iter: 2000 Time: 40.33
+
+Epoch: 1, Iter: 2100 Time: 40.35
+
+Epoch: 1, Iter: 2200 Time: 40.34
+
+Epoch: 1, Iter: 2300 Time: 40.32
+
+Epoch: 1, Iter: 2400 Time: 40.39
+
+Epoch: 1, Iter: 2500 Time: 40.38
+
+Epoch: 1, Iter: 2600 Time: 40.47
+
+Epoch: 1, Iter: 2700 Time: 40.41
+
+Epoch: 1, Iter: 2800 Time: 40.39
+
+Epoch: 1, Iter: 2900 Time: 40.45
+
+Epoch: 1, Iter: 3000 Time: 40.41
+
+Epoch: 1, Iter: 3100 Time: 40.38
+
+Epoch: 1, Iter: 3200 Time: 40.42
+
+Epoch: 1, Iter: 3300 Time: 40.44
+
+Epoch: 1, Iter: 3400 Time: 40.49
+
+Clone pairs: 58, non-clone pairs: 198 
+Recall: 0.603448, precision: 0.267176, f1 score: 0.370370
+Predicted_positive_count: 131, recall truly positive: 35, false positive: 96, missed true positive: 23
+(1, 0.53515625)
+model saved.
+Epoch: 2, Iter: 3500 Time: 4.48
+
+Epoch: 2, Iter: 3600 Time: 40.43
+
+Epoch: 2, Iter: 3700 Time: 40.49
+
+Epoch: 2, Iter: 3800 Time: 40.48
+
+Epoch: 2, Iter: 3900 Time: 40.43
+
+Epoch: 2, Iter: 4000 Time: 40.50
+
+Epoch: 2, Iter: 4100 Time: 40.47
+
+Epoch: 2, Iter: 4200 Time: 40.44
+
+Epoch: 2, Iter: 4300 Time: 40.47
+
+Epoch: 2, Iter: 4400 Time: 40.47
+
+Epoch: 2, Iter: 4500 Time: 40.45
+
+Epoch: 2, Iter: 4600 Time: 40.48
+
+Epoch: 2, Iter: 4700 Time: 40.49
+
+Epoch: 2, Iter: 4800 Time: 41.13
+
+Epoch: 2, Iter: 4900 Time: 41.74
+
+Epoch: 2, Iter: 5000 Time: 41.87
+
+Epoch: 2, Iter: 5100 Time: 41.39
+
+Epoch: 2, Iter: 5200 Time: 40.45
+
+Clone pairs: 58, non-clone pairs: 198 
+Recall: 0.517241, precision: 0.288462, f1 score: 0.370370
+Predicted_positive_count: 104, recall truly positive: 30, false positive: 74, missed true positive: 28
+(2, 0.6015625)
+model saved.
+time cost: 2481.07
+Overall accuracy: 0.58955
+Time cost: 2502.55
+Clone pairs: 2626, non-clone pairs: 10942 
+Recall: 0.543412, precision: 0.246162, f1 score: 0.338834
+Predicted_positive_count: 5797, recall truly positive: 1427, false positive: 4370, missed true positive: 1199
+********************************************************************************
+****************************************6****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 365.838
+
+Epoch: 20, Iter: 100
+
+l2 cost: 329.310
+
+Epoch: 40, Iter: 200
+
+l2 cost: 324.763
+
+Epoch: 60, Iter: 300
+
+l2 cost: 322.238
+
+Epoch: 80, Iter: 400
+
+l2 cost: 321.034
+
+Epoch: 100, Iter: 500
+
+l2 cost: 319.695
+
+Epoch: 120, Iter: 600
+
+l2 cost: 319.150
+
+Epoch: 140, Iter: 700
+
+l2 cost: 318.873
+
+Epoch: 160, Iter: 800
+
+l2 cost: 318.309
+
+Epoch: 180, Iter: 900
+
+l2 cost: 318.015
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 318.055
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 317.591
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 318.370
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 319.053
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 319.788
+
+Unsup phase time: 390.04
+Epoch: 0, Iter: 0 Time: 0.50
+
+Epoch: 0, Iter: 100 Time: 38.23
+
+Epoch: 0, Iter: 200 Time: 38.23
+
+Epoch: 0, Iter: 300 Time: 38.13
+
+Epoch: 0, Iter: 400 Time: 38.23
+
+Epoch: 0, Iter: 500 Time: 38.19
+
+Epoch: 0, Iter: 600 Time: 38.17
+
+Epoch: 0, Iter: 700 Time: 38.26
+
+Epoch: 0, Iter: 800 Time: 38.19
+
+Epoch: 0, Iter: 900 Time: 38.28
+
+Epoch: 0, Iter: 1000 Time: 38.12
+
+Epoch: 0, Iter: 1100 Time: 38.19
+
+Epoch: 0, Iter: 1200 Time: 38.23
+
+Epoch: 0, Iter: 1300 Time: 38.15
+
+Epoch: 0, Iter: 1400 Time: 38.20
+
+Epoch: 0, Iter: 1500 Time: 38.21
+
+Epoch: 0, Iter: 1600 Time: 38.17
+
+Epoch: 0, Iter: 1700 Time: 38.14
+
+Clone pairs: 45, non-clone pairs: 211 
+Recall: 0.422222, precision: 0.218391, f1 score: 0.287879
+Predicted_positive_count: 87, recall truly positive: 19, false positive: 68, missed true positive: 26
+(0, 0.6328125)
+model saved.
+Epoch: 1, Iter: 1800 Time: 22.57
+
+Epoch: 1, Iter: 1900 Time: 40.34
+
+Epoch: 1, Iter: 2000 Time: 40.29
+
+Epoch: 1, Iter: 2100 Time: 40.32
+
+Epoch: 1, Iter: 2200 Time: 40.50
+
+Epoch: 1, Iter: 2300 Time: 40.12
+
+Epoch: 1, Iter: 2400 Time: 40.14
+
+Epoch: 1, Iter: 2500 Time: 40.14
+
+Epoch: 1, Iter: 2600 Time: 40.14
+
+Epoch: 1, Iter: 2700 Time: 40.21
+
+Epoch: 1, Iter: 2800 Time: 40.06
+
+Epoch: 1, Iter: 2900 Time: 40.13
+
+Epoch: 1, Iter: 3000 Time: 40.06
+
+Epoch: 1, Iter: 3100 Time: 40.16
+
+Epoch: 1, Iter: 3200 Time: 40.09
+
+Epoch: 1, Iter: 3300 Time: 40.14
+
+Epoch: 1, Iter: 3400 Time: 40.09
+
+Clone pairs: 45, non-clone pairs: 211 
+Recall: 0.422222, precision: 0.206522, f1 score: 0.277372
+Predicted_positive_count: 92, recall truly positive: 19, false positive: 73, missed true positive: 26
+(1, 0.61328125)
+model saved.
+Epoch: 2, Iter: 3500 Time: 4.46
+
+Epoch: 2, Iter: 3600 Time: 40.33
+
+Epoch: 2, Iter: 3700 Time: 40.23
+
+Epoch: 2, Iter: 3800 Time: 40.30
+
+Epoch: 2, Iter: 3900 Time: 40.26
+
+Epoch: 2, Iter: 4000 Time: 40.25
+
+Epoch: 2, Iter: 4100 Time: 40.26
+
+Epoch: 2, Iter: 4200 Time: 40.23
+
+Epoch: 2, Iter: 4300 Time: 40.30
+
+Epoch: 2, Iter: 4400 Time: 40.29
+
+Epoch: 2, Iter: 4500 Time: 40.26
+
+Epoch: 2, Iter: 4600 Time: 40.32
+
+Epoch: 2, Iter: 4700 Time: 40.29
+
+Epoch: 2, Iter: 4800 Time: 40.33
+
+Epoch: 2, Iter: 4900 Time: 40.30
+
+Epoch: 2, Iter: 5000 Time: 40.31
+
+Epoch: 2, Iter: 5100 Time: 40.32
+
+Epoch: 2, Iter: 5200 Time: 40.28
+
+Clone pairs: 45, non-clone pairs: 211 
+Recall: 0.333333, precision: 0.220588, f1 score: 0.265487
+Predicted_positive_count: 68, recall truly positive: 15, false positive: 53, missed true positive: 30
+(2, 0.67578125)
+model saved.
+time cost: 2466.29
+Overall accuracy: 0.66193
+Time cost: 2487.81
+Clone pairs: 2625, non-clone pairs: 10943 
+Recall: 0.386667, precision: 0.254259, f1 score: 0.306786
+Predicted_positive_count: 3992, recall truly positive: 1015, false positive: 2977, missed true positive: 1610
+********************************************************************************
+****************************************7****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 367.875
+
+Epoch: 20, Iter: 100
+
+l2 cost: 331.943
+
+Epoch: 40, Iter: 200
+
+l2 cost: 330.699
+
+Epoch: 60, Iter: 300
+
+l2 cost: 329.000
+
+Epoch: 80, Iter: 400
+
+l2 cost: 327.626
+
+Epoch: 100, Iter: 500
+
+l2 cost: 326.969
+
+Epoch: 120, Iter: 600
+
+l2 cost: 326.175
+
+Epoch: 140, Iter: 700
+
+l2 cost: 325.655
+
+Epoch: 160, Iter: 800
+
+l2 cost: 325.723
+
+Epoch: 180, Iter: 900
+
+l2 cost: 325.749
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 325.866
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 326.530
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 327.709
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 329.501
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 331.756
+
+Unsup phase time: 390.01
+Epoch: 0, Iter: 0 Time: 0.51
+
+Epoch: 0, Iter: 100 Time: 38.09
+
+Epoch: 0, Iter: 200 Time: 38.08
+
+Epoch: 0, Iter: 300 Time: 38.15
+
+Epoch: 0, Iter: 400 Time: 38.09
+
+Epoch: 0, Iter: 500 Time: 38.04
+
+Epoch: 0, Iter: 600 Time: 38.15
+
+Epoch: 0, Iter: 700 Time: 38.07
+
+Epoch: 0, Iter: 800 Time: 38.07
+
+Epoch: 0, Iter: 900 Time: 38.06
+
+Epoch: 0, Iter: 1000 Time: 38.11
+
+Epoch: 0, Iter: 1100 Time: 38.07
+
+Epoch: 0, Iter: 1200 Time: 38.02
+
+Epoch: 0, Iter: 1300 Time: 38.03
+
+Epoch: 0, Iter: 1400 Time: 38.01
+
+Epoch: 0, Iter: 1500 Time: 38.04
+
+Epoch: 0, Iter: 1600 Time: 38.05
+
+Epoch: 0, Iter: 1700 Time: 38.07
+
+Clone pairs: 59, non-clone pairs: 197 
+Recall: 0.847458, precision: 0.285714, f1 score: 0.427350
+Predicted_positive_count: 175, recall truly positive: 50, false positive: 125, missed true positive: 9
+(0, 0.4765625)
+model saved.
+Epoch: 1, Iter: 1800 Time: 22.67
+
+Epoch: 1, Iter: 1900 Time: 40.54
+
+Epoch: 1, Iter: 2000 Time: 40.44
+
+Epoch: 1, Iter: 2100 Time: 40.47
+
+Epoch: 1, Iter: 2200 Time: 40.51
+
+Epoch: 1, Iter: 2300 Time: 40.41
+
+Epoch: 1, Iter: 2400 Time: 40.51
+
+Epoch: 1, Iter: 2500 Time: 40.47
+
+Epoch: 1, Iter: 2600 Time: 40.46
+
+Epoch: 1, Iter: 2700 Time: 40.44
+
+Epoch: 1, Iter: 2800 Time: 40.51
+
+Epoch: 1, Iter: 2900 Time: 40.48
+
+Epoch: 1, Iter: 3000 Time: 40.49
+
+Epoch: 1, Iter: 3100 Time: 40.41
+
+Epoch: 1, Iter: 3200 Time: 40.51
+
+Epoch: 1, Iter: 3300 Time: 40.48
+
+Epoch: 1, Iter: 3400 Time: 40.43
+
+Clone pairs: 59, non-clone pairs: 197 
+Recall: 0.661017, precision: 0.336207, f1 score: 0.445714
+Predicted_positive_count: 116, recall truly positive: 39, false positive: 77, missed true positive: 20
+(1, 0.62109375)
+model saved.
+Epoch: 2, Iter: 3500 Time: 4.45
+
+Epoch: 2, Iter: 3600 Time: 40.28
+
+Epoch: 2, Iter: 3700 Time: 40.32
+
+Epoch: 2, Iter: 3800 Time: 40.28
+
+Epoch: 2, Iter: 3900 Time: 40.40
+
+Epoch: 2, Iter: 4000 Time: 40.36
+
+Epoch: 2, Iter: 4100 Time: 40.31
+
+Epoch: 2, Iter: 4200 Time: 40.38
+
+Epoch: 2, Iter: 4300 Time: 40.36
+
+Epoch: 2, Iter: 4400 Time: 40.40
+
+Epoch: 2, Iter: 4500 Time: 40.41
+
+Epoch: 2, Iter: 4600 Time: 40.30
+
+Epoch: 2, Iter: 4700 Time: 40.31
+
+Epoch: 2, Iter: 4800 Time: 40.34
+
+Epoch: 2, Iter: 4900 Time: 40.31
+
+Epoch: 2, Iter: 5000 Time: 40.36
+
+Epoch: 2, Iter: 5100 Time: 40.36
+
+Epoch: 2, Iter: 5200 Time: 40.32
+
+Clone pairs: 59, non-clone pairs: 197 
+Recall: 0.610169, precision: 0.318584, f1 score: 0.418605
+Predicted_positive_count: 113, recall truly positive: 36, false positive: 77, missed true positive: 23
+(2, 0.609375)
+model saved.
+time cost: 2470.27
+Overall accuracy: 0.60284
+Time cost: 2491.51
+Clone pairs: 2613, non-clone pairs: 10699 
+Recall: 0.582090, precision: 0.266095, f1 score: 0.365230
+Predicted_positive_count: 5716, recall truly positive: 1521, false positive: 4195, missed true positive: 1092
+********************************************************************************
+****************************************8****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 368.223
+
+Epoch: 20, Iter: 100
+
+l2 cost: 331.134
+
+Epoch: 40, Iter: 200
+
+l2 cost: 330.093
+
+Epoch: 60, Iter: 300
+
+l2 cost: 328.536
+
+Epoch: 80, Iter: 400
+
+l2 cost: 326.703
+
+Epoch: 100, Iter: 500
+
+l2 cost: 325.898
+
+Epoch: 120, Iter: 600
+
+l2 cost: 325.162
+
+Epoch: 140, Iter: 700
+
+l2 cost: 324.870
+
+Epoch: 160, Iter: 800
+
+l2 cost: 324.498
+
+Epoch: 180, Iter: 900
+
+l2 cost: 324.356
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 324.316
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 324.335
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 324.888
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 325.844
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 327.266
+
+Unsup phase time: 392.06
+Epoch: 0, Iter: 0 Time: 0.55
+
+Epoch: 0, Iter: 100 Time: 40.88
+
+Epoch: 0, Iter: 200 Time: 40.89
+
+Epoch: 0, Iter: 300 Time: 40.92
+
+Epoch: 0, Iter: 400 Time: 40.92
+
+Epoch: 0, Iter: 500 Time: 40.88
+
+Epoch: 0, Iter: 600 Time: 40.83
+
+Epoch: 0, Iter: 700 Time: 40.84
+
+Epoch: 0, Iter: 800 Time: 40.95
+
+Epoch: 0, Iter: 900 Time: 40.79
+
+Epoch: 0, Iter: 1000 Time: 40.80
+
+Epoch: 0, Iter: 1100 Time: 40.85
+
+Epoch: 0, Iter: 1200 Time: 40.88
+
+Epoch: 0, Iter: 1300 Time: 40.86
+
+Epoch: 0, Iter: 1400 Time: 40.88
+
+Epoch: 0, Iter: 1500 Time: 40.86
+
+Epoch: 0, Iter: 1600 Time: 40.83
+
+Epoch: 0, Iter: 1700 Time: 40.82
+
+Clone pairs: 58, non-clone pairs: 198 
+Recall: 0.362069, precision: 0.287671, f1 score: 0.320611
+Predicted_positive_count: 73, recall truly positive: 21, false positive: 52, missed true positive: 37
+(0, 0.65234375)
+model saved.
+Epoch: 1, Iter: 1800 Time: 21.00
+
+Epoch: 1, Iter: 1900 Time: 40.23
+
+Epoch: 1, Iter: 2000 Time: 40.26
+
+Epoch: 1, Iter: 2100 Time: 40.27
+
+Epoch: 1, Iter: 2200 Time: 40.28
+
+Epoch: 1, Iter: 2300 Time: 40.24
+
+Epoch: 1, Iter: 2400 Time: 40.26
+
+Epoch: 1, Iter: 2500 Time: 40.33
+
+Epoch: 1, Iter: 2600 Time: 40.21
+
+Epoch: 1, Iter: 2700 Time: 40.28
+
+Epoch: 1, Iter: 2800 Time: 40.22
+
+Epoch: 1, Iter: 2900 Time: 40.28
+
+Epoch: 1, Iter: 3000 Time: 40.32
+
+Epoch: 1, Iter: 3100 Time: 40.26
+
+Epoch: 1, Iter: 3200 Time: 40.29
+
+Epoch: 1, Iter: 3300 Time: 40.26
+
+Epoch: 1, Iter: 3400 Time: 40.24
+
+Clone pairs: 58, non-clone pairs: 198 
+Recall: 0.396552, precision: 0.291139, f1 score: 0.335766
+Predicted_positive_count: 79, recall truly positive: 23, false positive: 56, missed true positive: 35
+(1, 0.64453125)
+model saved.
+Epoch: 2, Iter: 3500 Time: 1.23
+
+Epoch: 2, Iter: 3600 Time: 40.72
+
+Epoch: 2, Iter: 3700 Time: 40.79
+
+Epoch: 2, Iter: 3800 Time: 40.72
+
+Epoch: 2, Iter: 3900 Time: 40.73
+
+Epoch: 2, Iter: 4000 Time: 40.69
+
+Epoch: 2, Iter: 4100 Time: 40.75
+
+Epoch: 2, Iter: 4200 Time: 40.76
+
+Epoch: 2, Iter: 4300 Time: 40.73
+
+Epoch: 2, Iter: 4400 Time: 40.67
+
+Epoch: 2, Iter: 4500 Time: 40.72
+
+Epoch: 2, Iter: 4600 Time: 40.78
+
+Epoch: 2, Iter: 4700 Time: 40.68
+
+Epoch: 2, Iter: 4800 Time: 40.73
+
+Epoch: 2, Iter: 4900 Time: 40.75
+
+Epoch: 2, Iter: 5000 Time: 40.72
+
+Epoch: 2, Iter: 5100 Time: 40.73
+
+Epoch: 2, Iter: 5200 Time: 40.74
+
+Clone pairs: 58, non-clone pairs: 198 
+Recall: 0.448276, precision: 0.268041, f1 score: 0.335484
+Predicted_positive_count: 97, recall truly positive: 26, false positive: 71, missed true positive: 32
+(2, 0.59765625)
+model saved.
+time cost: 2529.07
+Overall accuracy: 0.61594
+Time cost: 2549.58
+Clone pairs: 2551, non-clone pairs: 10249 
+Recall: 0.523324, precision: 0.265144, f1 score: 0.351964
+Predicted_positive_count: 5035, recall truly positive: 1335, false positive: 3700, missed true positive: 1216
+********************************************************************************
+****************************************9****************************************
+Epoch: 0, Iter: 0
+
+l2 cost: 363.213
+
+Epoch: 20, Iter: 100
+
+l2 cost: 326.357
+
+Epoch: 40, Iter: 200
+
+l2 cost: 322.911
+
+Epoch: 60, Iter: 300
+
+l2 cost: 322.254
+
+Epoch: 80, Iter: 400
+
+l2 cost: 320.882
+
+Epoch: 100, Iter: 500
+
+l2 cost: 319.924
+
+Epoch: 120, Iter: 600
+
+l2 cost: 319.547
+
+Epoch: 140, Iter: 700
+
+l2 cost: 318.792
+
+Epoch: 160, Iter: 800
+
+l2 cost: 318.831
+
+Epoch: 180, Iter: 900
+
+l2 cost: 318.592
+
+Epoch: 200, Iter: 1000
+
+l2 cost: 318.418
+
+Epoch: 220, Iter: 1100
+
+l2 cost: 318.577
+
+Epoch: 240, Iter: 1200
+
+l2 cost: 318.671
+
+Epoch: 260, Iter: 1300
+
+l2 cost: 319.415
+
+Epoch: 280, Iter: 1400
+
+l2 cost: 321.012
+
+Unsup phase time: 392.63
+Epoch: 0, Iter: 0 Time: 0.56
+
+Epoch: 0, Iter: 100 Time: 40.94
+
+Epoch: 0, Iter: 200 Time: 40.94
+
+Epoch: 0, Iter: 300 Time: 40.90
+
+Epoch: 0, Iter: 400 Time: 40.92
+
+Epoch: 0, Iter: 500 Time: 40.95
+
+Epoch: 0, Iter: 600 Time: 40.94
+
+Epoch: 0, Iter: 700 Time: 40.86
+
+Epoch: 0, Iter: 800 Time: 40.92
+
+Epoch: 0, Iter: 900 Time: 40.89
+
+Epoch: 0, Iter: 1000 Time: 40.84
+
+Epoch: 0, Iter: 1100 Time: 40.93
+
+Epoch: 0, Iter: 1200 Time: 40.93
+
+Epoch: 0, Iter: 1300 Time: 40.85
+
+Epoch: 0, Iter: 1400 Time: 40.89
+
+Epoch: 0, Iter: 1500 Time: 40.95
+
+Epoch: 0, Iter: 1600 Time: 40.84
+
+Epoch: 0, Iter: 1700 Time: 40.89
+
+Clone pairs: 53, non-clone pairs: 203 
+Recall: 0.867925, precision: 0.267442, f1 score: 0.408889
+Predicted_positive_count: 172, recall truly positive: 46, false positive: 126, missed true positive: 7
+(0, 0.48046875)
+model saved.
+Epoch: 1, Iter: 1800 Time: 20.93
+
+Epoch: 1, Iter: 1900 Time: 40.89
+
+Epoch: 1, Iter: 2000 Time: 40.83
+
+Epoch: 1, Iter: 2100 Time: 40.86
+
+Epoch: 1, Iter: 2200 Time: 40.85
+
+Epoch: 1, Iter: 2300 Time: 40.89
+
+Epoch: 1, Iter: 2400 Time: 40.84
+
+Epoch: 1, Iter: 2500 Time: 40.85
+
+Epoch: 1, Iter: 2600 Time: 40.86
+
+Epoch: 1, Iter: 2700 Time: 40.87
+
+Epoch: 1, Iter: 2800 Time: 40.87
+
+Epoch: 1, Iter: 2900 Time: 40.88
+
+Epoch: 1, Iter: 3000 Time: 40.95
+
+Epoch: 1, Iter: 3100 Time: 40.89
+
+Epoch: 1, Iter: 3200 Time: 40.84
+
+Epoch: 1, Iter: 3300 Time: 40.93
+
+Epoch: 1, Iter: 3400 Time: 40.89
+
+Clone pairs: 53, non-clone pairs: 203 
+Recall: 0.679245, precision: 0.260870, f1 score: 0.376963
+Predicted_positive_count: 138, recall truly positive: 36, false positive: 102, missed true positive: 17
+(1, 0.53515625)
+model saved.
+Epoch: 2, Iter: 3500 Time: 0.41
+
+Epoch: 2, Iter: 3600 Time: 40.87
+
+Epoch: 2, Iter: 3700 Time: 40.90
+
+Epoch: 2, Iter: 3800 Time: 40.85
+
+Epoch: 2, Iter: 3900 Time: 40.87
+
+Epoch: 2, Iter: 4000 Time: 40.92
+
+Epoch: 2, Iter: 4100 Time: 40.86
+
+Epoch: 2, Iter: 4200 Time: 40.86
+
+Epoch: 2, Iter: 4300 Time: 40.93
+
+Epoch: 2, Iter: 4400 Time: 40.88
+
+Epoch: 2, Iter: 4500 Time: 40.84
+
+Epoch: 2, Iter: 4600 Time: 40.95
+
+Epoch: 2, Iter: 4700 Time: 40.89
+
+Epoch: 2, Iter: 4800 Time: 40.87
+
+Epoch: 2, Iter: 4900 Time: 41.78
+
+Epoch: 2, Iter: 5000 Time: 41.46
+
+Epoch: 2, Iter: 5100 Time: 41.10
+
+Epoch: 2, Iter: 5200 Time: 41.08
+
+Clone pairs: 53, non-clone pairs: 203 
+Recall: 0.716981, precision: 0.308943, f1 score: 0.431818
+Predicted_positive_count: 123, recall truly positive: 38, false positive: 85, missed true positive: 15
+(2, 0.609375)
+model saved.
+time cost: 2547.13
+Overall accuracy: 0.57215
+Time cost: 2567.61
+Clone pairs: 2549, non-clone pairs: 9995 
+Recall: 0.640643, precision: 0.268409, f1 score: 0.378316
+Predicted_positive_count: 6084, recall truly positive: 1633, false positive: 4451, missed true positive: 916
+********************************************************************************
+Avg accuracy: 0.5611, avg recall: 0.5867, avg precision: 0.2440, avg f1 score: 0.3411
+Total 10-fold cross-validation time:  25887.4439559
+Traceback (most recent call last):
+  File "sda_unsup.py", line 548, in <module>
+    predict_on_full_dataset()
+  File "sda_unsup.py", line 468, in predict_on_full_dataset
+    dataset = np.load(open(file_path, 'r'))
+  File "/home/chenzhi/.conda/envs/deepsim/lib/python2.7/site-packages/numpy/lib/npyio.py", line 451, in load
+    raise ValueError("Cannot load file containing pickled data "
+ValueError: Cannot load file containing pickled data when allow_pickle=False
+(deepsim) chenzhi@Bruce-Lin:~/Code/deepsim/dcsim$ 

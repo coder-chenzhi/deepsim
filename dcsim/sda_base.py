@@ -123,7 +123,7 @@ def train_10_fold():
 
     skf = StratifiedKFold(n_splits=10)
     file_path = "../dataset/g4_128.npy"
-    dataset = np.load(open(file_path, 'r'))
+    dataset = np.load(open(file_path, 'r'), allow_pickle=True)
     X, y = np.array(dataset['X']), np.array(dataset['y'], dtype=np.int)
     
     with tf.name_scope('Input'):
@@ -193,10 +193,12 @@ def train_10_fold():
                 train_X_left = train_X_left[indices]
                 train_X_right = train_X_right[indices]
                 train_Y = train_Y[indices]
+                it_beg = time.clock()
                 for start, end in zip(
                         range(0, np.shape(train_X_left)[0], batch_size),
                         range(batch_size, np.shape(train_X_left)[0] + 1,
                               batch_size)):
+
                     dense_train_X_left = from_sparse_arrs(train_X_left[start:end])
                     dense_train_X_right = from_sparse_arrs(train_X_right[start:end])
                     batch_samples_weights = np.matmul(train_Y[start:end],
@@ -212,8 +214,8 @@ def train_10_fold():
                                                   })
                     step += 1
                     if step % 100 == 0 and step != 0:
-                        print('Epoch: %d, Iter: %d\n' % (epoch, step))
-                
+                        print('Epoch: %d, Iter: %d Time: %.2f\n' % (epoch, step, time.clock() - it_beg))
+                        it_beg = time.clock()
                 predict_Y = sess.run(predict_op,
                                      feed_dict={X_left: dense_test_X_left,
                                                 X_right: dense_test_X_right,
@@ -320,7 +322,7 @@ def stat(Y, predicted_Y, fout=None):
 def predict_on_full_dataset():
     st = time.time()
     file_path = "../dataset/g4_128.npy"
-    dataset = np.load(open(file_path, 'r'))
+    dataset = np.load(open(file_path, 'r'), allow_pickle=True)
     X, y = np.array(dataset['X']), np.array(dataset['y'], dtype=np.int)
     test_X_left, test_X_right, test_Y = \
         graph_mat_data.make_pairs_10_fold_for_predict(X, y)

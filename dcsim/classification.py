@@ -519,7 +519,7 @@ def predict_on_full_dataset():
     predict_op = tf.argmax(py_x, 1)
 
     file_path = "../dataset/g4_128.npy"
-    dataset = np.load(open(file_path, 'r'))
+    dataset = np.load(open(file_path, 'r'), allow_pickle=True)
     X, y = np.array(dataset['X']), np.array(dataset['y'], dtype=np.int)
     
     t_beg = time.clock()

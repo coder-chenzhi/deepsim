@@ -172,7 +172,7 @@ def train_10_fold():
 
     skf = StratifiedKFold(n_splits=10)
     file_path = "../dataset/g4_128.npy"
-    dataset = np.load(open(file_path, 'r'))
+    dataset = np.load(open(file_path, 'r'), allow_pickle=True)
     X, y = np.array(dataset['X']), np.array(dataset['y'], dtype=np.int32)
     
     with tf.name_scope('Input'):
@@ -294,6 +294,7 @@ def train_10_fold():
                 train_X_left = train_X_left[indices]
                 train_X_right = train_X_right[indices]
                 train_Y = train_Y[indices]
+                it_beg = time.clock()
                 for start, end in zip(
                         range(0, np.shape(train_X_left)[0], batch_size),
                         range(batch_size, np.shape(train_X_left)[0] + 1,
@@ -323,7 +324,8 @@ def train_10_fold():
                                             sample_weights: batch_samples_weights})
                     # train_writer.add_summary(summary, it)
                     if (it % 100 == 0):
-                        print('Epoch: %d, Iter: %d\n' % (epoch, it))
+                        print('Epoch: %d, Iter: %d Time: %.2f\n' % (epoch, it, time.clock() - it_beg))
+                        it_beg = time.clock()
                     it += 1
     
                 h_left_val = sess.run(h_left_op,
@@ -463,7 +465,7 @@ def predict_on_full_dataset():
     '''
     st = time.time()
     file_path = "../dataset/g4_128.npy"
-    dataset = np.load(open(file_path, 'r'))
+    dataset = np.load(open(file_path, 'r'), allow_pickle=True)
     X, y = np.array(dataset['X']), np.array(dataset['y'], dtype=np.int)
     # test_X_left, test_X_right, test_Y = \
     #     graph_mat_data.make_pairs_10_fold_for_predict(X, y)
