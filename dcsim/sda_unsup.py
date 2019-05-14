@@ -195,7 +195,9 @@ def train_10_fold():
         h_right_op = encoder(X_right, dropout)
     h_left = tf.placeholder(tf.float32, [None, h_dim])
     h_right = tf.placeholder(tf.float32, [None, h_dim])
-    py_x = binary_classification(h_left, h_right, dropout)
+
+    with tf.variable_scope('classification'):
+        py_x = binary_classification(h_left, h_right, dropout)
     
     cls_cost = tf.reduce_mean(
         tf.nn.softmax_cross_entropy_with_logits(logits=py_x, labels=Y))
@@ -258,7 +260,7 @@ def train_10_fold():
             dense_test_X_right = from_sparse_arrs(test_X_right[0:test_size])
 
             it = 0
-            for epoch in xrange(300):
+            for epoch in range(300):
                 indices = np.random.permutation(X_train.shape[0])
                 shuffle_train_X = X_train[indices]
                 for start, end in zip(
@@ -289,7 +291,7 @@ def train_10_fold():
             merged = tf.summary.merge_all('cls')
             best_test_acc = 0.
             it = 0
-            for epoch in xrange(3):
+            for epoch in range(3):
                 indices = np.random.permutation(train_X_left.shape[0])
                 train_X_left = train_X_left[indices]
                 train_X_right = train_X_right[indices]
@@ -477,7 +479,7 @@ def predict_on_full_dataset():
         Y = tf.placeholder(tf.float32, [None, 2])
     dropout = tf.placeholder(tf.float32, name='dropout')
     
-    with tf.variable_scope('encoder-decoder'):
+    with tf.variable_scope('encoder-decoder', reuse=True):
         h = encoder(X_left, dropout)
         z = decoder(h)
     
@@ -486,7 +488,9 @@ def predict_on_full_dataset():
         h_right_op = encoder(X_right, dropout)
     h_left = tf.placeholder(tf.float32, [None, h_dim])
     h_right = tf.placeholder(tf.float32, [None, h_dim])
-    py_x = binary_classification(h_left, h_right, dropout)
+
+    with tf.variable_scope('classification', reuse=True):
+        py_x = binary_classification(h_left, h_right, dropout)
     
     predict_op = tf.argmax(py_x, 1)
     
